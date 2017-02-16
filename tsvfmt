@@ -17,7 +17,7 @@ tmp_widths=tsv_${RANDOM}_widths.txt
 
 #take file input, or standard input, and redirect to a temporary file
 #also, convert mac line-endings to UNIX ones
-perl -p -e 's/(:?\r\n?|\n)/\n/g' > "$tmp_filename"
+perl -p -e 's/(:?\r\n?|\n)/\n/g' "$1" > "$tmp_filename"
 
 #now we're going to extract max record widths from the file
 #send the contents to awk
